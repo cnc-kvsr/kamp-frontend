@@ -12,7 +12,8 @@ import { NavyComponent } from './components/navy/navy.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 
-import {ToastrModule} from "ngx-toastr"
+import {ToastrModule} from "ngx-toastr";
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {ToastrModule} from "ngx-toastr"
     CategoryComponent,
     NavyComponent,
     FilterPipePipe,
-    VatAddedPipe
+    VatAddedPipe,
+    CartSummaryComponent
   ],
   imports: [
     BrowserModule,
