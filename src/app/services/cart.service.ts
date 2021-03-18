@@ -15,13 +15,18 @@ export class CartService {
       item.quantity += 1;
     } else {
       let cartItem = new CartItem();
-      cartItem.product=product;
-      cartItem.quantity=1;
-      CartItems.push(cartItem)
+      cartItem.product = product;
+      cartItem.quantity = 1;
+      CartItems.push(cartItem);
     }
   }
 
-  list():CartItem[]{
+  removeFromCart(product: Product) {
+    let item:CartItem = CartItems.find((c) => c.product.productId === product.productId);
+    CartItems.splice(CartItems.indexOf(item), 1);
+  }
+
+  list(): CartItem[] {
     return CartItems;
   }
 }
